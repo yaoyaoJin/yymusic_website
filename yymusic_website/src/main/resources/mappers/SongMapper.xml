@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.music.yymusic_website.dao.SongDao">
+    <resultMap id="BaseResultMap" type="Song">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="singer_id" jdbcType="INTEGER" property="singerId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="introduction" jdbcType="VARCHAR" property="introduction"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="picture" jdbcType="VARCHAR" property="picture"/>
+        <result column="link" jdbcType="VARCHAR" property="link"/>
+    </resultMap>
+    <!--歌词的内容过大，查询太多次会给服务器带来压力，故提出来，需要时再用-->
+    <!--ResultMapWithBlobs 继承BaseResultMap-->
+    <resultMap id="ResultMapWithBlobs" type="Song" extends="BaseResultMap">
+        <result column="lyric" jdbcType="LONGVARCHAR" property="lyric"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,singer_id,name,introduction,create_time,update_time,picture,link
+    </sql>
+    <sql id="Blob_Column_List">
+        id,singer_id,name,introduction,create_time,update_time,picture,lyric,link
+    </sql>
+
+    <insert id="addSong" parameterType="Song">
+        insert into song
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="singerId != null">
+                singer_id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+                create_time,
+                update_time,
+            <if test="picture != null">
+                picture,
+            </if>
+            <if test="lyric != null">
+                lyric,
+            </if>
+            <if test="link != null">
+                link,
+            </if>
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="singerId != null">
+                #{singerId},
+            </if>
+            <if test="name != null">
+                #{name},
+            </if>
+            <if test="introduction != null">
+                #{introduction},
+            </if>
+            now(),now(),
+            <if test="picture != null">
+                #{picture},
+            </if>
+            <if test="lyric != null">
+                #{lyric},
+            </if>
+            <if test="link != null">
+                #{link},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateSong" parameterType="Song">
+        update song
+        <set>
+            <!--<if test="singerId != null">
+                singer_id=#{singerId},
+            </if>-->
+            <if test="name != null">
+                name=#{name},
+            </if>
+            <if test="introduction != null">
+                introduction=#{introduction},
+            </if>
+                update_time=now(),
+            <if test="picture != null">
+                picture=#{picture},
+            </if>
+            <if test="lyric != null">
+                lyric=#{lyric},
+            </if>
+            <if test="link != null">
+                link=#{link},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteSong" parameterType="Integer">
+        delete from song
+        where id=#{id}
+    </delete>
+
+    <select id="searchSong_By_Id" parameterType="Integer" resultMap="ResultMapWithBlobs">
+        select
+        <include refid="Blob_Column_List"/>
+        from song
+        where id=#{id}
+    </select>
+
+    <select id="search_All_Song" resultMap="ResultMapWithBlobs">
+        select
+        <include refid="Blob_Column_List"></include>
+        from song
+    </select>
+
+    <select id="searchSong_By_Name" parameterType="String" resultMap="ResultMapWithBlobs">
+        select
+        <include refid="Blob_Column_List"></include>
+        from song
+        where name=#{name}
+    </select>
+
+    <select id="searchSong_Like_Name" parameterType="String" resultMap="ResultMapWithBlobs">
+        select
+        <include refid="Blob_Column_List"></include>
+        from song
+        where name like #{name}
+    </select>
+
+    <select id="searchSong_By_SingerId" parameterType="Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Blob_Column_List"></include>
+        from song
+        where singer_id=#{singerId}
+    </select>
+
+</mapper>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.music.yymusic_website.dao.SingerDao">
+    <resultMap id="BaseResultMap" type="Singer">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="sex" jdbcType="TINYINT" property="sex"/>
+        <result column="picture" jdbcType="VARCHAR" property="picture"/>
+        <result column="birth" jdbcType="TIMESTAMP" property="birth"/>
+        <result column="location" jdbcType="VARCHAR" property="location"/>
+        <result column="introduction" jdbcType="VARCHAR" property="introduction"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,sex,picture,birth,location,introduction
+    </sql>
+
+    <insert id="addSinger" parameterType="Singer">
+        insert into singer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="picture != null">
+                picture,
+            </if>
+            <if test="birth != null">
+                birth,
+            </if>
+            <if test="location != null">
+                location,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="name != null">
+                #{name},
+            </if>
+            <if test="sex != null">
+                #{sex},
+            </if>
+            <if test="picture != null">
+                #{picture},
+            </if>
+            <if test="birth != null">
+                #{birth},
+            </if>
+            <if test="location != null">
+                #{location},
+            </if>
+            <if test="introduction != null">
+                #{introduction},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateSinger" parameterType="Singer">
+        update singer
+        <set>
+            <if test="name != null">
+                name=#{name},
+            </if>
+            <if test="sex != null">
+                sex=#{sex},
+            </if>
+            <if test="picture != null">
+                picture=#{picture},
+            </if>
+            <if test="birth != null">
+                birth=#{birth},
+            </if>
+            <if test="location != null">
+                location=#{location},
+            </if>
+            <if test="introduction != null">
+                introduction=#{introduction},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteSinger" parameterType="Integer">
+        delete from singer
+        where id=#{id}
+    </delete>
+
+    <select id="searchSinger_By_Id" parameterType="int" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from singer
+        where id=#{id}
+    </select>
+
+    <select id="search_All_Singer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        from singer
+    </select>
+
+    <select id="searchSinger_By_Name" parameterType="String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        from singer
+        where name like #{name}
+    </select>
+
+</mapper>

@@ -1,0 +1,3703 @@
+{
+  "name": "yymusic_website",
+  "describe": "数据库设计",
+  "avatar": "",
+  "version": "3.5.7",
+  "createdTime": "2021-12-16 15:40:14",
+  "updatedTime": "2021-12-19 17:36:08",
+  "profile": {
+    "default": {
+      "db": "55DB2843-2F02-4DA8-88E1-D88822BE6A6F",
+      "dbConn": "",
+      "entityInitFields": [
+        {
+          "defKey": "TENANT_ID",
+          "defName": "租户号",
+          "comment": "",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "refDict": "",
+          "uiHint": "",
+          "id": "F79B2CE2-413C-4FDD-A78E-66B7574168C8"
+        },
+        {
+          "defKey": "REVISION",
+          "defName": "乐观锁",
+          "comment": "",
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "58498B02-22EF-4CF5-8EAE-2736E2E9037F"
+        },
+        {
+          "defKey": "CREATED_BY",
+          "defName": "创建人",
+          "comment": "",
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "C4BC1ADF-105B-4893-8E38-A79B1F03800B"
+        },
+        {
+          "defKey": "CREATED_TIME",
+          "defName": "创建时间",
+          "comment": "",
+          "domain": "5941A8FD-2289-446C-A265-3FD7F2393D05",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "9B5F7119-FDE0-475A-B24D-08F1E6DFF53E"
+        },
+        {
+          "defKey": "UPDATED_BY",
+          "defName": "更新人",
+          "comment": "",
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "0ABEFA0A-0C71-47FF-884B-D507B9F9E1DD"
+        },
+        {
+          "defKey": "UPDATED_TIME",
+          "defName": "更新时间",
+          "comment": "",
+          "domain": "5941A8FD-2289-446C-A265-3FD7F2393D05",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "17F9F09C-894C-409D-80C2-2D186B28F39B"
+        }
+      ],
+      "entityInitProperties": {}
+    },
+    "sql": {
+      "delimiter": ""
+    },
+    "dataTypeSupports": [
+      {
+        "defKey": "MYSQL",
+        "id": "55DB2843-2F02-4DA8-88E1-D88822BE6A6F"
+      },
+      {
+        "defKey": "ORACLE",
+        "id": "5D8B2965-EF89-43B6-B00F-D250C2B5ED79"
+      },
+      {
+        "defKey": "SQLServer",
+        "id": "9F96B700-42C0-4818-BD13-1EB2EE689431"
+      },
+      {
+        "defKey": "PostgreSQL",
+        "id": "9F1314E7-BD2A-4403-8075-A8D1B491978E"
+      },
+      {
+        "defKey": "DB2",
+        "id": "00947097-A0BD-4877-AE1A-EC76752D5683"
+      },
+      {
+        "defKey": "DM",
+        "id": "1B98D270-A635-41F0-A6CF-F3F16E298661"
+      },
+      {
+        "defKey": "GaussDB",
+        "id": "6C569523-23EF-40DC-9D5F-8604EC872282"
+      },
+      {
+        "defKey": "Kingbase",
+        "id": "20288CDC-8E6C-412D-8953-3E61EE456618"
+      },
+      {
+        "defKey": "MaxCompute",
+        "id": "17BB8591-B505-4C62-A50A-00A3DA88B1B0"
+      },
+      {
+        "defKey": "JAVA",
+        "id": "C7560683-7F9C-41ED-8D9F-077CE02E5E9C"
+      },
+      {
+        "defKey": "C#",
+        "id": "22CA72A1-2933-4303-BC5C-2EA0EA7117A1"
+      },
+      {
+        "defKey": "SQLite",
+        "id": "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04"
+      }
+    ],
+    "codeTemplates": [
+      {
+        "type": "dbDDL",
+        "applyFor": "55DB2843-2F02-4DA8-88E1-D88822BE6A6F",
+        "isDefault": true,
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTO_INCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }} COMMENT '{{=it.func.join(field.defName,field.comment,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n)  COMMENT = '{{=it.func.join(it.entity.defName,it.entity.comment,';') }}';\n$blankline\n",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "5D8B2965-EF89-43B6-B00F-D250C2B5ED79",
+        "isDefault": true,
+        "createTable": "CREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? '' : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "9F96B700-42C0-4818-BD13-1EB2EE689431",
+        "isDefault": true,
+        "createTable": "IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[{{=it.entity.defKey}}]') AND type in (N'U'))\nDROP TABLE [dbo].[{{=it.entity.defKey}}];\n\nCREATE TABLE [dbo].[{{=it.entity.defKey}}](\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? ' IDENTITY(1,1)' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n){{=it.separator}}\n$blankline\n{{? it.entity.defKey || it.entity.defName}}EXEC sp_addextendedproperty 'MS_Description', '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}', 'SCHEMA', dbo, 'table', {{=it.entity.defKey}}, null, null;{{?}}\n{{~it.entity.fields:field:index}}\nEXEC sp_addextendedproperty 'MS_Description', '{{=it.func.join(field.defName,field.comment,';')}}', 'SCHEMA', dbo, 'table', {{=it.entity.defKey}}, 'column', {{=field.defKey}};\n{{~}}\n",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "9F1314E7-BD2A-4403-8075-A8D1B491978E",
+        "isDefault": true,
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? ' AUTO_INCREMENT' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "appCode",
+        "applyFor": "C7560683-7F9C-41ED-8D9F-077CE02E5E9C",
+        "isDefault": true,
+        "content": "package cn.com.chiner.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n{{\n    var today=new Date();\n    var fullYear=today.getFullYear();\n    var month=today.getMonth() + 1;\n    var days=today.getDate();\n}}\n /**\n * @author : http://www.chiner.pro\n * @date : {{=fullYear}}-{{=month}}-{{=days}}\n * @desc : {{=it.func.join(it.entity.defName,it.entity.comment,'-')}}\n */\n@Table(name=\"{{=it.entity.defKey}}\")\npublic class {{=it.func.camel(it.entity.defKey,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.defName,field.comment,';')}} */\n    {{? field.primaryKey }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=it.func.camel(field.defKey,false)}} ;\n{{~}}\n$blankline\n\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.defName,field.comment,';')}} */\n    public {{=field.type}} get{{=it.func.camel(field.defKey,true)}}(){\n        return this.{{=it.func.camel(field.defKey,false)}};\n    }\n    /** {{=it.func.join(field.defName,field.comment,';')}} */\n    public void set{{=it.func.camel(field.defKey,true)}}({{=field.type}} {{= it.func.camel(field.defKey,false) }}){\n        this.{{=it.func.camel(field.defKey,false)}}={{=it.func.camel(field.defKey,false)}};\n    }\n{{~}}\n}"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "00947097-A0BD-4877-AE1A-EC76752D5683",
+        "isDefault": true,
+        "createTable": "CREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? '' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "1B98D270-A635-41F0-A6CF-F3F16E298661",
+        "isDefault": true,
+        "createTable": "CREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? '' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ','('+field.defaultValue+')',' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "appCode",
+        "applyFor": "22CA72A1-2933-4303-BC5C-2EA0EA7117A1",
+        "isDefault": true,
+        "content": "using System;\nusing System.Collections.Generic;\n\n$blankline\n{{\n    var today=new Date();\n    var fullYear=today.getFullYear();\n    var month=today.getMonth() + 1;\n    var days=today.getDate();\n}}\n/*\n * @author : http://www.chiner.com.cn\n * @date : {{=fullYear}}-{{=month}}-{{=days}}\n * @desc : {{=it.func.join(it.entity.defName,it.entity.comment,'-')}}\n */\nnamespace Chiner.Application\n{\n    public partial class {{=it.func.camel(it.entity.defKey,true) }}\n    {\n    \n        {{~it.entity.fields:field:index}}\n        /// <summary>\n        /// {{=it.func.join(field.defName,field.comment,';')}}\n        /// </summary>\n        public {{=field.type}} {{=it.func.camel(field.defKey,true)}} { get; set; }\n        $blankline\n        {{~}}\n        \n    }\n}"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "6C569523-23EF-40DC-9D5F-8604EC872282",
+        "isDefault": true,
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? ' AUTO_INCREMENT' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "20288CDC-8E6C-412D-8953-3E61EE456618",
+        "isDefault": true,
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "dictSQLTemplate",
+        "isDefault": true,
+        "content": "/* 插入字典总表[{{=it.dict.defKey}}-{{=it.dict.defName}}] */\nINSERT INTO SYS_DICT(KEY_,LABEL,INTRO,REVISION) VALUES('{{=it.dict.defKey}}','{{=it.dict.defName}}','{{=it.dict.intro}}',1);\n/* 插入字典明细表 */\n{{~it.dict.items:item:index}}\nINSERT INTO SYS_DICT_ITEM(DICT_KEY,KEY_,LABEL,SORT_,INTRO,REVISION) VALUES('{{=it.dict.defKey}}','{{=item.defKey}}','{{=item.defName}}','{{=item.sort}}','{{=item.intro}}',1);\n{{~}}"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "17BB8591-B505-4C62-A50A-00A3DA88B1B0",
+        "isDefault": true,
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTO_INCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }} COMMENT '{{=it.func.join(field.defName,field.comment,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n)  COMMENT = '{{=it.func.join(it.entity.defName,it.entity.comment,';') }}';\n$blankline\n",
+        "createIndex": "",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      },
+      {
+        "applyFor": "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04",
+        "type": "dbDDL",
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTOINCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }} --{{=it.func.join(field.defName,field.comment,';')}}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n)  ; --{{=it.func.join(it.entity.defName,it.entity.comment,';') }}\n$blankline\n",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}",
+        "createView": "CREATE VIEW {{=it.view.defKey}} AS\nSELECT \n{{~it.view.fields:field:index}}\n    {{=field.refEntity}}.{{=field.refEntityField}} AS {{=field.defKey}}{{= index < it.view.fields.length-1 ? ',' : ''}}\n{{~}}\nFROM {{~it.view.refEntities:refEntity:index}}{{=refEntity}}{{= index < it.view.refEntities.length-1 ? ',' : ''}}{{~}};\n$blankline\n"
+      }
+    ],
+    "generatorDoc": {
+      "docTemplate": ""
+    },
+    "relationFieldSize": "15",
+    "uiHint": [
+      {
+        "defKey": "Input",
+        "defName": "普通输入框",
+        "id": "939D2A77-2CFC-49CE-8E48-32820E65CF85"
+      },
+      {
+        "defKey": "Select",
+        "defName": "下拉输入框",
+        "id": "84928880-A9C8-45DE-8A28-49BD74BF1308"
+      },
+      {
+        "defKey": "CheckBox",
+        "defName": "复选框",
+        "id": "81B6D04E-156A-4F42-AD60-DE33BFDA6ADD"
+      },
+      {
+        "defKey": "RadioBox",
+        "defName": "单选框",
+        "id": "067698BC-5E52-414A-B432-939635DABF69"
+      },
+      {
+        "defKey": "Double",
+        "defName": "小数输入",
+        "id": "95F2770D-E332-4239-BFCE-73F2A6039713"
+      },
+      {
+        "defKey": "Integer",
+        "defName": "整数输入",
+        "id": "3817B787-1F0C-4E1E-BD7A-605F0ADC17DE"
+      },
+      {
+        "defKey": "Money",
+        "defName": "金额输入",
+        "id": "9BB2BAC6-E913-47AB-99E3-BCFA9C1BAC6A"
+      },
+      {
+        "defKey": "Date",
+        "defName": "日期输入",
+        "id": "092E74FD-32B5-4B57-8533-C2E98775361C"
+      },
+      {
+        "defKey": "DataYearMonth",
+        "defName": "年月输入",
+        "id": "3F7035A3-D1E2-42DC-978F-D701D113FCB2"
+      },
+      {
+        "defKey": "Text",
+        "defName": "长文本输入",
+        "id": "D789083B-B75B-43CF-BB1B-0E887D82C752"
+      },
+      {
+        "defKey": "RichText",
+        "defName": "富文本输入",
+        "id": "FC3DA182-D9B5-4698-871C-F5AB4DD80265"
+      }
+    ]
+  },
+  "entities": [
+    {
+      "id": "09759A38-4729-4FCE-9B65-EF0A92AF136F",
+      "defKey": "users",
+      "defName": "用户",
+      "comment": "",
+      "properties": {},
+      "nameTemplate": "{defName}[{defKey}]",
+      "headers": [
+        {
+          "freeze": false,
+          "refKey": "hideInGraph",
+          "hideInGraph": true,
+          "code": "relationNoShow",
+          "value": "关系图",
+          "newCode": "hideInGraph",
+          "com": "Icon",
+          "relationNoShow": true
+        },
+        {
+          "freeze": true,
+          "refKey": "defKey",
+          "hideInGraph": false,
+          "code": "name",
+          "value": "字段代码",
+          "newCode": "defKey",
+          "com": "Input",
+          "relationNoShow": false
+        },
+        {
+          "freeze": true,
+          "refKey": "defName",
+          "hideInGraph": false,
+          "code": "chnname",
+          "value": "显示名称",
+          "newCode": "defName",
+          "com": "Input",
+          "relationNoShow": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false,
+          "code": "pk",
+          "value": "主键",
+          "newCode": "primaryKey",
+          "com": "Checkbox",
+          "relationNoShow": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true,
+          "code": "notNull",
+          "value": "不为空",
+          "newCode": "notNull",
+          "com": "Checkbox",
+          "relationNoShow": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true,
+          "code": "autoIncrement",
+          "value": "自增",
+          "newCode": "autoIncrement",
+          "com": "Checkbox",
+          "relationNoShow": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true,
+          "code": "type",
+          "value": "数据域",
+          "newCode": "domain",
+          "com": "Select",
+          "relationNoShow": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false,
+          "code": "dataType",
+          "value": "数据类型",
+          "newCode": "type",
+          "com": "Text",
+          "relationNoShow": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false,
+          "code": "len",
+          "value": "长度",
+          "newCode": "len",
+          "com": "Input",
+          "relationNoShow": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false,
+          "code": "scale",
+          "value": "小数位数",
+          "newCode": "scale",
+          "com": "Input",
+          "relationNoShow": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true,
+          "code": "remark",
+          "value": "说明",
+          "newCode": "comment",
+          "com": "Input",
+          "relationNoShow": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true,
+          "code": "refDict",
+          "value": "数据字典",
+          "newCode": "refDict",
+          "com": "SearchSelect",
+          "relationNoShow": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true,
+          "code": "defaultValue",
+          "value": "默认值",
+          "newCode": "defaultValue",
+          "com": "Input",
+          "relationNoShow": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false,
+          "code": "isStandard",
+          "value": "标准字段",
+          "newCode": "isStandard",
+          "com": "label",
+          "relationNoShow": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true,
+          "code": "uiHint",
+          "value": "UI建议",
+          "newCode": "uiHint",
+          "com": "Select",
+          "relationNoShow": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "user_Id",
+          "defName": "用户id",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "9B1CCC4C-45AA-411E-AB31-95FE984D709C",
+          "refDict": "",
+          "uiHint": "",
+          "id": "9A9245D7-2B5F-4D0E-86D9-C8EE3A7E1FFD"
+        },
+        {
+          "defKey": "user_Name",
+          "defName": "用户昵称",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "EC77DDB5-4C29-46F9-B22F-2D020EDFB39E"
+        },
+        {
+          "defKey": "pwd",
+          "defName": "用户密码",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "FA6977E1-8997-491F-845C-F552E2EAD9EC"
+        },
+        {
+          "defKey": "user_CreatTime",
+          "defName": "创建时间",
+          "comment": "",
+          "domain": "5941A8FD-2289-446C-A265-3FD7F2393D05",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "E985FCCB-9AFC-4177-AD51-C3F52D98D335"
+        }
+      ],
+      "correlations": [],
+      "indexes": []
+    },
+    {
+      "id": "0B961363-0051-43A1-8CE8-3A224A18AEF5",
+      "defKey": "music_type",
+      "defName": "音乐类型",
+      "comment": "",
+      "properties": {},
+      "nameTemplate": "{defName}[{defKey}]",
+      "headers": [
+        {
+          "freeze": false,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": true,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": true,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "type_Id",
+          "defName": "音乐类型id",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "9B1CCC4C-45AA-411E-AB31-95FE984D709C",
+          "refDict": "",
+          "uiHint": "",
+          "id": "36918718-CE0B-48C1-B31D-BBB5B04B26F1"
+        },
+        {
+          "defKey": "type_Name",
+          "defName": "类型名称",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "3AA0A908-E3A5-4C96-BFC6-F70BD0034E85"
+        }
+      ],
+      "correlations": [],
+      "indexes": []
+    },
+    {
+      "id": "39D08990-E40B-4998-8D3F-EAC11163C289",
+      "defKey": "music_library",
+      "defName": "乐库",
+      "comment": "",
+      "properties": {},
+      "nameTemplate": "{defName}[{defKey}]",
+      "headers": [
+        {
+          "freeze": false,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": true,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": true,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "music_Id",
+          "defName": "id",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "9B1CCC4C-45AA-411E-AB31-95FE984D709C",
+          "refDict": "",
+          "uiHint": "",
+          "id": "6C67BA76-1CDC-4717-B9DF-5E04710FFBD5"
+        },
+        {
+          "defKey": "music_Name",
+          "defName": "曲名",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "BEBA91D9-0CC8-48DC-831A-3D3F3B5E221D"
+        },
+        {
+          "defKey": "music_Singer",
+          "defName": "歌手",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 100,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "佚名",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "29C17AC2-D1A5-4DC7-9444-4A366988EB07"
+        },
+        {
+          "defKey": "music_Link",
+          "defName": "歌曲链接",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 255,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "F327D840-03D3-491E-8464-999A595B3F38"
+        },
+        {
+          "defKey": "state",
+          "defName": "状态",
+          "comment": "1：可用 0：无效",
+          "domain": "9B1CCC4C-45AA-411E-AB31-95FE984D709C",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "1",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "1BA20AAC-BE13-43CB-9A48-728A0C8615FC"
+        },
+        {
+          "defKey": "music_type",
+          "defName": "歌曲类型",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "AD7057E8-994E-476D-917E-39A64227698B"
+        },
+        {
+          "defKey": "music_image",
+          "defName": "歌曲封面图片",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "20C638A6-92D0-4C5C-B022-E87E689C188F",
+          "id": "60AE5283-7EF3-4562-9B71-EC6ECC97AA30"
+        }
+      ],
+      "correlations": [],
+      "indexes": []
+    },
+    {
+      "id": "57E68C9B-066B-4D5D-B6A2-52BE3D206BA3",
+      "defKey": "music_playlist",
+      "defName": "播放列表",
+      "comment": "",
+      "properties": {},
+      "nameTemplate": "{defName}[{defKey}]",
+      "headers": [
+        {
+          "freeze": false,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": true,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": true,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "TENANT_ID",
+          "defName": "租户号",
+          "comment": "",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "refDict": "",
+          "uiHint": "",
+          "id": "478B312D-043B-44C1-95F4-46CCDEAB24D4"
+        },
+        {
+          "defKey": "REVISION",
+          "defName": "乐观锁",
+          "comment": "",
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "FE7E7DA9-05B4-4285-B30A-6143A8690556"
+        },
+        {
+          "defKey": "CREATED_BY",
+          "defName": "创建人",
+          "comment": "",
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "4EE77DCE-8177-4743-9A50-6AAE26F81B2E"
+        },
+        {
+          "defKey": "CREATED_TIME",
+          "defName": "创建时间",
+          "comment": "",
+          "domain": "5941A8FD-2289-446C-A265-3FD7F2393D05",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "C5517855-57AA-47D2-8829-31D26B0D76B8"
+        },
+        {
+          "defKey": "UPDATED_BY",
+          "defName": "更新人",
+          "comment": "",
+          "domain": "40C90C84-B800-4F7A-8EAA-77963C7B3476",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "AA0D9FD3-2DAA-4747-BFBE-58D388CB8802"
+        },
+        {
+          "defKey": "UPDATED_TIME",
+          "defName": "更新时间",
+          "comment": "",
+          "domain": "5941A8FD-2289-446C-A265-3FD7F2393D05",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "4DFD238C-DF62-4024-B69E-090288AC0939"
+        }
+      ],
+      "correlations": [],
+      "indexes": []
+    }
+  ],
+  "views": [],
+  "dicts": [],
+  "viewGroups": [
+    {
+      "defKey": "yymusic_website",
+      "defName": "",
+      "refEntities": [
+        "09759A38-4729-4FCE-9B65-EF0A92AF136F",
+        "0B961363-0051-43A1-8CE8-3A224A18AEF5",
+        "39D08990-E40B-4998-8D3F-EAC11163C289",
+        "57E68C9B-066B-4D5D-B6A2-52BE3D206BA3"
+      ],
+      "refViews": [],
+      "refDiagrams": [],
+      "refDicts": [],
+      "id": "5861F8F7-128F-4C8D-8CBB-1161803D9EF6"
+    }
+  ],
+  "dataTypeMapping": {
+    "referURL": "",
+    "mappings": [
+      {
+        "defKey": "string",
+        "defName": "字串",
+        "id": "1EFB6366-9DB3-4C36-A84B-7C5228316A77",
+        "55DB2843-2F02-4DA8-88E1-D88822BE6A6F": "VARCHAR",
+        "5D8B2965-EF89-43B6-B00F-D250C2B5ED79": "VARCHAR2",
+        "9F96B700-42C0-4818-BD13-1EB2EE689431": "VARCHAR",
+        "9F1314E7-BD2A-4403-8075-A8D1B491978E": "VARCHAR",
+        "00947097-A0BD-4877-AE1A-EC76752D5683": "VARCHAR",
+        "1B98D270-A635-41F0-A6CF-F3F16E298661": "VARCHAR2",
+        "6C569523-23EF-40DC-9D5F-8604EC872282": "VARCHAR",
+        "20288CDC-8E6C-412D-8953-3E61EE456618": "VARCHAR",
+        "17BB8591-B505-4C62-A50A-00A3DA88B1B0": "STRING",
+        "C7560683-7F9C-41ED-8D9F-077CE02E5E9C": "String",
+        "22CA72A1-2933-4303-BC5C-2EA0EA7117A1": "string",
+        "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04": "TEXT"
+      },
+      {
+        "defKey": "double",
+        "defName": "小数",
+        "id": "B29546F5-DD21-447A-8D12-27A6D3DB8E6A",
+        "55DB2843-2F02-4DA8-88E1-D88822BE6A6F": "DECIMAL",
+        "5D8B2965-EF89-43B6-B00F-D250C2B5ED79": "DECIMAL",
+        "9F96B700-42C0-4818-BD13-1EB2EE689431": "DECIMAL",
+        "9F1314E7-BD2A-4403-8075-A8D1B491978E": "NUMERIC",
+        "00947097-A0BD-4877-AE1A-EC76752D5683": "DECIMAL",
+        "1B98D270-A635-41F0-A6CF-F3F16E298661": "DECIMAL",
+        "6C569523-23EF-40DC-9D5F-8604EC872282": "NUMERIC",
+        "20288CDC-8E6C-412D-8953-3E61EE456618": "NUMERIC",
+        "17BB8591-B505-4C62-A50A-00A3DA88B1B0": "DOUBLE",
+        "C7560683-7F9C-41ED-8D9F-077CE02E5E9C": "Double",
+        "22CA72A1-2933-4303-BC5C-2EA0EA7117A1": "decimal",
+        "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04": "REAL"
+      },
+      {
+        "defKey": "int",
+        "defName": "整数",
+        "id": "73614843-D750-4C70-B553-58CF87ED6288",
+        "55DB2843-2F02-4DA8-88E1-D88822BE6A6F": "INT",
+        "5D8B2965-EF89-43B6-B00F-D250C2B5ED79": "INT",
+        "9F96B700-42C0-4818-BD13-1EB2EE689431": "INT",
+        "9F1314E7-BD2A-4403-8075-A8D1B491978E": "INTEGER",
+        "00947097-A0BD-4877-AE1A-EC76752D5683": "INT",
+        "1B98D270-A635-41F0-A6CF-F3F16E298661": "INTEGER",
+        "6C569523-23EF-40DC-9D5F-8604EC872282": "INTEGER",
+        "20288CDC-8E6C-412D-8953-3E61EE456618": "INT4",
+        "17BB8591-B505-4C62-A50A-00A3DA88B1B0": "INT",
+        "C7560683-7F9C-41ED-8D9F-077CE02E5E9C": "Integer",
+        "22CA72A1-2933-4303-BC5C-2EA0EA7117A1": "int",
+        "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04": "INTEGER"
+      },
+      {
+        "defKey": "date",
+        "defName": "日期",
+        "id": "1B579C5A-7A6F-482C-9462-4EE1D61E1F76",
+        "55DB2843-2F02-4DA8-88E1-D88822BE6A6F": "DATETIME",
+        "5D8B2965-EF89-43B6-B00F-D250C2B5ED79": "DATE",
+        "9F96B700-42C0-4818-BD13-1EB2EE689431": "DATETIME",
+        "9F1314E7-BD2A-4403-8075-A8D1B491978E": "DATE",
+        "00947097-A0BD-4877-AE1A-EC76752D5683": "DATE",
+        "1B98D270-A635-41F0-A6CF-F3F16E298661": "DATE",
+        "6C569523-23EF-40DC-9D5F-8604EC872282": "DATE",
+        "20288CDC-8E6C-412D-8953-3E61EE456618": "DATE",
+        "17BB8591-B505-4C62-A50A-00A3DA88B1B0": "DATETIME",
+        "C7560683-7F9C-41ED-8D9F-077CE02E5E9C": "Date",
+        "22CA72A1-2933-4303-BC5C-2EA0EA7117A1": "DateTime",
+        "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04": "NUMERIC"
+      },
+      {
+        "defKey": "bytes",
+        "defName": "二进制",
+        "id": "E7CD6AD7-F4C8-4916-B66E-130D60FD2987",
+        "55DB2843-2F02-4DA8-88E1-D88822BE6A6F": "BLOB",
+        "5D8B2965-EF89-43B6-B00F-D250C2B5ED79": "BLOB",
+        "9F96B700-42C0-4818-BD13-1EB2EE689431": "VARBINARY",
+        "9F1314E7-BD2A-4403-8075-A8D1B491978E": "BYTEA",
+        "00947097-A0BD-4877-AE1A-EC76752D5683": "BLOB",
+        "1B98D270-A635-41F0-A6CF-F3F16E298661": "BLOB",
+        "6C569523-23EF-40DC-9D5F-8604EC872282": "BYTEA",
+        "20288CDC-8E6C-412D-8953-3E61EE456618": "BYTEA",
+        "17BB8591-B505-4C62-A50A-00A3DA88B1B0": "BINARY",
+        "C7560683-7F9C-41ED-8D9F-077CE02E5E9C": "byte[]",
+        "22CA72A1-2933-4303-BC5C-2EA0EA7117A1": "byte[]",
+        "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04": "NONE"
+      },
+      {
+        "defKey": "largeText",
+        "defName": "大文本",
+        "id": "C94B16F5-54AF-444F-90E5-B51281F493FB",
+        "55DB2843-2F02-4DA8-88E1-D88822BE6A6F": "TEXT",
+        "5D8B2965-EF89-43B6-B00F-D250C2B5ED79": "CLOB",
+        "9F96B700-42C0-4818-BD13-1EB2EE689431": "TEXT",
+        "9F1314E7-BD2A-4403-8075-A8D1B491978E": "TEXT",
+        "00947097-A0BD-4877-AE1A-EC76752D5683": "CLOB",
+        "1B98D270-A635-41F0-A6CF-F3F16E298661": "CLOB",
+        "6C569523-23EF-40DC-9D5F-8604EC872282": "TEXT",
+        "20288CDC-8E6C-412D-8953-3E61EE456618": "TEXT",
+        "17BB8591-B505-4C62-A50A-00A3DA88B1B0": "STRING",
+        "C7560683-7F9C-41ED-8D9F-077CE02E5E9C": "String",
+        "22CA72A1-2933-4303-BC5C-2EA0EA7117A1": "string",
+        "AD7D4346-B5A4-43EB-9E72-46FFCD5EDE04": "TEXT"
+      }
+    ]
+  },
+  "domains": [
+    {
+      "defKey": "DefaultString",
+      "defName": "默认字串",
+      "applyFor": "1EFB6366-9DB3-4C36-A84B-7C5228316A77",
+      "len": 255,
+      "scale": "",
+      "uiHint": "",
+      "id": "20C638A6-92D0-4C5C-B022-E87E689C188F"
+    },
+    {
+      "defKey": "IdOrKey",
+      "defName": "主键标识",
+      "applyFor": "1EFB6366-9DB3-4C36-A84B-7C5228316A77",
+      "len": 32,
+      "scale": "",
+      "uiHint": "",
+      "id": "40C90C84-B800-4F7A-8EAA-77963C7B3476"
+    },
+    {
+      "defKey": "Name",
+      "defName": "名称",
+      "applyFor": "1EFB6366-9DB3-4C36-A84B-7C5228316A77",
+      "len": 90,
+      "scale": "",
+      "uiHint": "",
+      "id": "370B640F-3AE2-4715-8648-A9E41014EAEC"
+    },
+    {
+      "defKey": "Int",
+      "defName": "整数",
+      "applyFor": "73614843-D750-4C70-B553-58CF87ED6288",
+      "len": "",
+      "scale": "",
+      "uiHint": "",
+      "id": "9B1CCC4C-45AA-411E-AB31-95FE984D709C"
+    },
+    {
+      "defKey": "Double",
+      "defName": "小数",
+      "applyFor": "B29546F5-DD21-447A-8D12-27A6D3DB8E6A",
+      "len": 24,
+      "scale": 6,
+      "uiHint": "",
+      "id": "5D3E6C52-9423-410A-9848-CCF9EA067E2B"
+    },
+    {
+      "defKey": "Money",
+      "defName": "金额",
+      "applyFor": "B29546F5-DD21-447A-8D12-27A6D3DB8E6A",
+      "len": 24,
+      "scale": 6,
+      "uiHint": "",
+      "id": "9C200BBB-76F1-43F4-AF57-4D23D4FC057E"
+    },
+    {
+      "defKey": "DateTime",
+      "defName": "日期时间",
+      "applyFor": "1B579C5A-7A6F-482C-9462-4EE1D61E1F76",
+      "len": "",
+      "scale": "",
+      "uiHint": "",
+      "id": "5941A8FD-2289-446C-A265-3FD7F2393D05"
+    },
+    {
+      "defKey": "YesNo",
+      "defName": "是否",
+      "applyFor": "1EFB6366-9DB3-4C36-A84B-7C5228316A77",
+      "len": "1",
+      "scale": "",
+      "uiHint": "",
+      "id": "3A952E7E-998E-40E4-AD8F-0A9A1CEA61AC"
+    },
+    {
+      "defKey": "Dict",
+      "defName": "数据字典",
+      "applyFor": "1EFB6366-9DB3-4C36-A84B-7C5228316A77",
+      "len": "32",
+      "scale": "",
+      "uiHint": "",
+      "id": "F7E4F8DE-7A53-4A94-A23E-A207633E0E00"
+    },
+    {
+      "defKey": "DescText",
+      "defName": "描述文本",
+      "applyFor": "1EFB6366-9DB3-4C36-A84B-7C5228316A77",
+      "len": "900",
+      "scale": "",
+      "uiHint": "",
+      "id": "6284BA84-6CAA-42FB-95F5-F74BD6314B62"
+    }
+  ],
+  "diagrams": [
+    {
+      "defKey": "ER图",
+      "defName": "",
+      "relationType": "field",
+      "canvasData": {
+        "cells": [
+          {
+            "id": "00bbdb85-5426-4331-8f71-d1355ea8c915",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "804c801e-97e9-4466-a7fd-5af87d9bf7cf",
+              "port": "out"
+            },
+            "target": {
+              "cell": "04e6a321-e563-4f78-a523-42049b4e87bf",
+              "port": "in2"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "83ba085f-562d-4e87-aedf-53628f8c7145",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "92bbc173-e316-46f2-aba1-c76c679be844",
+              "port": "out"
+            },
+            "target": {
+              "cell": "04e6a321-e563-4f78-a523-42049b4e87bf",
+              "port": "top"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "2aad1059-0a44-4b63-b66d-31cdb0db4740",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "66ed7ae3-d50d-4d6f-b1fb-96d98529c60c",
+              "port": "in"
+            },
+            "target": {
+              "cell": "04e6a321-e563-4f78-a523-42049b4e87bf",
+              "port": "top3"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "ea7b06c2-3b85-44a8-9e7b-9c5ca46f70d9",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "29e89542-6f8b-4d52-977e-5776d86a3a27",
+              "port": "in"
+            },
+            "target": {
+              "cell": "04e6a321-e563-4f78-a523-42049b4e87bf",
+              "port": "out2"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "29e89542-6f8b-4d52-977e-5776d86a3a27",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": 320,
+              "y": -100
+            },
+            "label": "创建时间",
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "66ed7ae3-d50d-4d6f-b1fb-96d98529c60c",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": 207,
+              "y": -140
+            },
+            "label": "昵称",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "f3977d08-67a2-4f64-a6a1-97b14e73488e",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "3ab44ea0-3be5-4b2f-931c-41a70f199dd3",
+              "port": "out"
+            },
+            "target": {
+              "cell": "ed7a6b31-97d8-4b47-a1cd-be5b7c90181b",
+              "port": "top2"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "b17ae8d9-8dd3-4835-ab74-92873dee8a92",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "fdbf54c6-d669-44d9-bc39-1f80ef683730",
+              "port": "out"
+            },
+            "target": {
+              "cell": "ed7a6b31-97d8-4b47-a1cd-be5b7c90181b",
+              "port": "top"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "6ad0bf82-db09-456a-b6b0-0bbc1a734a02",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "fd3ddd13-3b87-4bfd-bf9a-6e20820a95c2",
+              "port": "out"
+            },
+            "target": {
+              "cell": "ed7a6b31-97d8-4b47-a1cd-be5b7c90181b",
+              "port": "in"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "734d6b72-4db5-4e1e-9b23-76a9014e80e7",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "29291b8c-1f27-43e0-8f83-a7c391556e02",
+              "port": "out"
+            },
+            "target": {
+              "cell": "ed7a6b31-97d8-4b47-a1cd-be5b7c90181b",
+              "port": "in3"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "e1482d3a-0925-4020-be6f-79bf0a938aa9",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "777492d8-1f17-4872-b3d7-41c1be0ea53c",
+              "port": "out"
+            },
+            "target": {
+              "cell": "ed7a6b31-97d8-4b47-a1cd-be5b7c90181b",
+              "port": "bottom"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "29291b8c-1f27-43e0-8f83-a7c391556e02",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -217,
+              "y": 109
+            },
+            "label": "风格",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "777492d8-1f17-4872-b3d7-41c1be0ea53c",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -200,
+              "y": 169
+            },
+            "label": "封面",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "fdbf54c6-d669-44d9-bc39-1f80ef683730",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -200,
+              "y": -10
+            },
+            "label": "歌名",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "92bbc173-e316-46f2-aba1-c76c679be844",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": 30,
+              "y": -140
+            },
+            "label": "id",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "fd3ddd13-3b87-4bfd-bf9a-6e20820a95c2",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -217,
+              "y": 45.00000000000004
+            },
+            "label": "链接",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "804c801e-97e9-4466-a7fd-5af87d9bf7cf",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -80,
+              "y": -110
+            },
+            "label": "密码",
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "6794b249-d364-4ddd-8a26-bc867a163b97",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "bf7ab962-b2ff-4b71-90c9-8f2d3298b2c5",
+              "port": "top"
+            },
+            "target": {
+              "cell": "72c62d9c-c1a2-4100-9571-33f281bebaff",
+              "port": "in2"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "2242ea21-b768-4762-99e7-286f3df3dce8",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "ba9d873e-c48f-4ce9-a94f-69cf228f5095",
+              "port": "top"
+            },
+            "target": {
+              "cell": "72c62d9c-c1a2-4100-9571-33f281bebaff",
+              "port": "bottom"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "bf7ab962-b2ff-4b71-90c9-8f2d3298b2c5",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -40.000000000000014,
+              "y": 109
+            },
+            "label": "id",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "ba9d873e-c48f-4ce9-a94f-69cf228f5095",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": 14.999999999999986,
+              "y": 139
+            },
+            "label": "名称",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "7acb090c-3c95-4a74-afb0-8fd2814a5df8",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "e9b7ad9a-6aaf-4ea5-bf41-5beb45bbac63",
+              "port": "top"
+            },
+            "target": {
+              "cell": "72c62d9c-c1a2-4100-9571-33f281bebaff",
+              "port": "bottom2"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "2e7c3344-f5dc-4cec-a687-a20fa9cee08d",
+            "shape": "erdRelation",
+            "source": {
+              "cell": "0780cf30-7aee-480b-9f4e-728b1bd236b2",
+              "port": "top"
+            },
+            "target": {
+              "cell": "72c62d9c-c1a2-4100-9571-33f281bebaff",
+              "port": "bottom3"
+            },
+            "relation": "1:n",
+            "fillColor": "#ACDAFC",
+            "router": {
+              "name": "manhattan"
+            }
+          },
+          {
+            "id": "04e6a321-e563-4f78-a523-42049b4e87bf",
+            "shape": "edit-node",
+            "position": {
+              "x": 80,
+              "y": -60
+            },
+            "label": "用户",
+            "size": {
+              "width": 80,
+              "height": 30
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "in",
+                  "id": "in2"
+                },
+                {
+                  "group": "in",
+                  "id": "in3"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "out",
+                  "id": "out2"
+                },
+                {
+                  "group": "out",
+                  "id": "out3"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "top",
+                  "id": "top2"
+                },
+                {
+                  "group": "top",
+                  "id": "top3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom3"
+                }
+              ]
+            }
+          },
+          {
+            "id": "72c62d9c-c1a2-4100-9571-33f281bebaff",
+            "shape": "edit-node",
+            "position": {
+              "x": 68.99999999999997,
+              "y": 40.00000000000004
+            },
+            "label": "用户歌单",
+            "size": {
+              "width": 90,
+              "height": 40
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "in",
+                  "id": "in2"
+                },
+                {
+                  "group": "in",
+                  "id": "in3"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "out",
+                  "id": "out2"
+                },
+                {
+                  "group": "out",
+                  "id": "out3"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "top",
+                  "id": "top2"
+                },
+                {
+                  "group": "top",
+                  "id": "top3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom3"
+                },
+                {
+                  "id": "bottom4",
+                  "group": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "e9b7ad9a-6aaf-4ea5-bf41-5beb45bbac63",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": 80,
+              "y": 149
+            },
+            "label": "封面",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "0780cf30-7aee-480b-9f4e-728b1bd236b2",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": 160,
+              "y": 124
+            },
+            "label": "用户id",
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "ed7a6b31-97d8-4b47-a1cd-be5b7c90181b",
+            "shape": "edit-node",
+            "position": {
+              "x": -120,
+              "y": 50.00000000000004
+            },
+            "label": "本地音乐",
+            "size": {
+              "width": 80,
+              "height": 40
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "in",
+                  "id": "in2"
+                },
+                {
+                  "group": "in",
+                  "id": "in3"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "out",
+                  "id": "out2"
+                },
+                {
+                  "group": "out",
+                  "id": "out3"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "top",
+                  "id": "top2"
+                },
+                {
+                  "group": "top",
+                  "id": "top3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom3"
+                }
+              ]
+            }
+          },
+          {
+            "id": "3ab44ea0-3be5-4b2f-931c-41a70f199dd3",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -177,
+              "y": -60
+            },
+            "label": "id",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "25cae4f4-63e7-432b-89e7-8392ea779cbc",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -200,
+              "y": 259
+            },
+            "label": "id",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "id": "60a444c5-b224-4cde-ba59-3b967915390c",
+            "shape": "edit-node",
+            "position": {
+              "x": -120.00000000000003,
+              "y": 219.00000000000006
+            },
+            "label": "歌曲类型",
+            "size": {
+              "width": 90,
+              "height": 40
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "in",
+                  "id": "in2"
+                },
+                {
+                  "group": "in",
+                  "id": "in3"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "out",
+                  "id": "out2"
+                },
+                {
+                  "group": "out",
+                  "id": "out3"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "top",
+                  "id": "top2"
+                },
+                {
+                  "group": "top",
+                  "id": "top3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom3"
+                }
+              ]
+            }
+          },
+          {
+            "id": "63fa1576-e7bd-4aed-9ea5-a08f9c10e54e",
+            "shape": "edit-node-circle-svg",
+            "position": {
+              "x": -120,
+              "y": 288
+            },
+            "label": "描述",
+            "size": {
+              "width": 50,
+              "height": 50
+            },
+            "ports": {
+              "groups": {
+                "in": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "left"
+                  }
+                },
+                "out": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "right"
+                  }
+                },
+                "top": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "top"
+                  }
+                },
+                "bottom": {
+                  "attrs": {
+                    "fo": {
+                      "width": 8,
+                      "height": 8,
+                      "x": -4,
+                      "y": -4,
+                      "magnet": "true",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  },
+                  "zIndex": 3,
+                  "position": {
+                    "name": "bottom"
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "in",
+                  "id": "in"
+                },
+                {
+                  "group": "out",
+                  "id": "out"
+                },
+                {
+                  "group": "top",
+                  "id": "top"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bottom"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "id": "C02E8F2C-0596-4AFC-989D-BCD0BEDBB502"
+    }
+  ],
+  "standardFields": []
+}
